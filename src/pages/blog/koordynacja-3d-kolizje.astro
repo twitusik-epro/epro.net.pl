@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Wykrywanie kolizji w Revit | ePro" description="Jak projektowanie 3D BIM w Revit eliminuje kolizje między trasami kablowymi a instalacjami? Koordynacja branżowa bez błędów montażowych.">
+    <div class="article-wrapper">
+        <header>
+            <a href="/" class="logo-text">ePro Tomasz Witusik sp. k.</a>
+            <a href="/blog" class="tech-btn">POWRÓT DO BAZY WIEDZY</a>
+        </header>
+
+        <article class="article-container">
+            <div class="tech-label">KOORDYNACJA MIĘDZYBRANŻOWA</div>
+            <h1>Wykrywanie kolizji w Revit – trasy kablowe i oprawy oświetleniowe bez błędów montażowych</h1>
+            
+            <p class="lead">Współczesny proces budowlany nie wybacza błędów projektowych wykrytych dopiero na etapie montażu. W ePro eliminujemy ten problem, stosując pełną koordynację międzybranżową w środowisku 3D.</p>
+
+            <h2>Eliminacja błędów na etapie projektu</h2>
+            <p>Dzięki modelowaniu tras kablowych oraz precyzyjnemu rozmieszczeniu opraw oświetleniowych, jesteśmy w stanie wykryć kolizje z kanałami wentylacyjnymi czy rurami wod-kan jeszcze przed wbiciem pierwszej łopaty. Projektowanie w Revit pozwala nam "zobaczyć" budynek w całości.</p>
+
+            <div class="highlight-box">
+                <div class="box-decor"></div>
+                Precyzyjne rozmieszczenie gniazd i łączników w modelu 3D daje pewność, że nie zostaną one zasłonięte przez elementy konstrukcyjne, co bezpośrednio przekłada się na płynność prac.
+            </div>
+
+            <h2>Gwarancja terminowości</h2>
+            <p>Modelowanie całej instalacji elektrycznej w Revit – od lamp po widoki rozdzielnic – gwarantuje, że wykonawca nie spotka na budowie niespodzianek, które wymagają przestojów i kosztownych przeróbek.</p>
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .article-wrapper { min-height: 100vh; overflow-y: auto; position: relative; z-index: 10; padding-bottom: 50px; }
+    header { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 30, 51, 0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; }
+    .logo-text { font-weight: 700; color: white; text-transform: uppercase; text-decoration: none; }
+    .tech-btn { color: #00f0ff; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 0.8rem; border: 1px solid rgba(0, 240, 255, 0.3); padding: 5px 15px; background: rgba(0, 240, 255, 0.05); text-decoration: none; }
+    .article-container { max-width: 800px; margin: 60px auto; padding: 50px; background: rgba(11, 30, 51, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); position: relative; }
+    .article-container::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, #00f0ff, transparent); }
+    .tech-label { color: #00f0ff; font-family: 'Chakra Petch', monospace; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 10px; }
+    h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 30px; line-height: 1.2; font-family: 'Rajdhani', sans-serif; }
+    h2 { color: white; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px; border-left: 3px solid #00f0ff; padding-left: 15px; font-family: 'Rajdhani', sans-serif; }
+    p { margin-bottom: 20px; font-size: 1.1rem; color: #d0d0d0; line-height: 1.7; }
+    .lead { font-size: 1.2rem; color: white; }
+    .highlight-box { background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); padding: 30px; margin: 30px 0; font-style: italic; color: #e0e0e0; position: relative; }
+    .box-decor { position: absolute; top: -1px; left: -1px; width: 10px; height: 10px; border-top: 2px solid #00f0ff; border-left: 2px solid #00f0ff; }
+</style>

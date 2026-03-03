@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Baza Wiedzy i Blog | ePro" description="Artykuły branżowe ePro: projektowanie 3D BIM w Revit, wykrywanie kolizji, instalacje elektryczne w budownictwie komercyjnym i przemysłowym.">
+    <svg class="cables-container" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <path class="cable-path" d="M0,200 C300,200 400,400 600,400 S900,100 1200,100 S1600,300 1920,200" />
+        <path class="cable-path" d="M-100,800 C200,800 500,600 800,600 S1400,900 2000,800" />
+    </svg>
+
+    <div class="main-container-scroll">
+        <header>
+            <div class="logo">
+                <span class="logo-text">ePro Tomasz Witusik sp. k.</span>
+            </div>
+            
+            <a href="/" class="tech-btn">
+                <span class="btn-bracket">[</span> POWRÓT DO STRONY GŁÓWNEJ <span class="btn-bracket">]</span>
+            </a>
+        </header>
+
+        <section class="blog-section">
+            <div class="tech-label">
+                <span class="crosshair">+</span> BAZA WIEDZY <span class="crosshair">+</span>
+            </div>
+            
+            <h1 class="section-title">Artykuły Branżowe</h1>
+            
+            <div class="blog-grid">
+                
+                <a href="/blog/projektowanie-3d-bim" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">TECHNOLOGIA /// </div>
+                        <h2 class="card-title">Projektowanie 3D w BIM - podstawy</h2>
+                        <div class="card-excerpt">Wstęp do świata modelowania informacji o budynku i zalety pracy w środowisku 3D.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+                <a href="/blog/koordynacja-3d-kolizje" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">KOORDYNACJA /// </div>
+                        <h2 class="card-title">Wykrywanie kolizji w Revit</h2>
+                        <div class="card-excerpt">Jak trasy kablowe i oprawy oświetleniowe projektujemy bez błędów montażowych.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+                <a href="/blog/green-building-elektryka" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">EKOLOGIA /// </div>
+                        <h2 class="card-title">Green Building w elektrotechnice</h2>
+                        <div class="card-excerpt">Optymalizacja materiałów i brak marnotrawstwa dzięki precyzji modeli 3D.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+                <a href="/blog/dokumentacja-3d-zarzadzanie" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">ZARZĄDZANIE ///</div>
+                        <h2 class="card-title">Dokumentacja powykonawcza 3D</h2>
+                        <div class="card-excerpt">Jak inteligentny projekt ułatwia życie administratorowi obiektu po budowie.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+                <a href="/blog/instalacje-przemyslowe-3d" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">PRZEMYSŁ ///</div>
+                        <h2 class="card-title">Instalacje przemysłowe w Revit</h2>
+                        <div class="card-excerpt">Trasy kablowe i instalacje odgromowe w trudnych warunkach hal i magazynów.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+                <a href="/blog/modelowanie-pzt-oswietlenie" class="blog-card">
+                    <div class="card-content">
+                        <div class="card-meta">TEREN /// </div>
+                        <h2 class="card-title">Modelowanie PZT w Revit</h2>
+                        <div class="card-excerpt">Lampy zewnętrzne i planowanie konserwacji za pomocą widoków 3D.</div>
+                        <span class="read-more">CZYTAJ DALEJ >></span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <div class="data-block">
+                        NIP: <span class="mono">5130300068</span><br>
+                        KRS: <span class="mono">0001151114</span>
+                    </div>
+                </div>
+                <div class="footer-col center-col">
+                    <div class="data-block">
+                        <span class="accent-color">epro@epro.net.pl, www.epro.net.pl</span>
+                    </div>
+                </div>
+                <div class="footer-col right-col">
+                    <div class="court-tiny">
+                        Sąd Rejonowy dla Krakowa Śródmieścia<br>
+                        XII Wydział Gospodarczy KRS
+                    </div>
+                    <div class="court-tiny" style="margin-top: 6px;">
+                        Ta strona nie używa plików cookies<br>
+                        ani nie śledzi użytkowników.
+                    </div>
+                </div>
+            </div>
+            <div class="footer-rodo">
+                RODO: Administratorem danych jest ePro Tomasz Witusik sp. k.
+            </div>
+        </footer>
+    </div>
+</Layout>
+
+<style>
+    /* KABLE ANIMOWANE */
+    .cables-container {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
+    }
+    .cable-path {
+        fill: none; stroke: rgba(255, 255, 255, 0.1); stroke-width: 1.5;
+        stroke-dasharray: 1000; stroke-dashoffset: 1000;
+        animation: drawLine 8s ease-in-out infinite alternate;
+    }
+    @keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+    /* UKŁAD */
+    .main-container-scroll {
+        position: relative; z-index: 10; min-height: 100vh; display: flex; flex-direction: column; 
+        overflow-y: auto; background: rgba(11, 30, 51, 0.4);
+    }
+
+    /* HEADER */
+    header {
+        padding: 25px 50px; display: flex; justify-content: space-between; align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        background: rgba(11, 30, 51, 0.9); backdrop-filter: blur(10px);
+    }
+    .logo-text { font-weight: 700; color: white; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    .tech-btn {
+        color: #00f0ff; font-family: 'Chakra Petch', sans-serif; font-weight: 600; 
+        text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+        border: 1px solid rgba(0, 240, 255, 0.3); padding: 8px 18px;
+        background: rgba(0, 240, 255, 0.05); text-decoration: none; font-size: 0.85rem;
+    }
+    .tech-btn:hover { background: rgba(0, 240, 255, 0.15); border-color: #00f0ff; box-shadow: 0 0 15px rgba(0,240,255,0.2); }
+
+    /* SEKCJA BLOGA */
+    .blog-section { flex-grow: 1; padding: 60px 50px; max-width: 1400px; margin: 0 auto; width: 100%; }
+    .tech-label { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #00f0ff; font-family: 'Chakra Petch', monospace; font-size: 0.8rem; letter-spacing: 3px; }
+    .section-title { font-size: 3.5rem; margin: 0 0 50px 0; font-weight: 700; color: white; line-height: 1; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 35px; }
+
+    /* KAFEL - TERAZ BEZ ZDJĘCIA, TYLKO TREŚĆ */
+    .blog-card {
+        background: rgba(11, 30, 51, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); 
+        transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; 
+        color: white; backdrop-filter: blur(5px); text-decoration: none;
+        min-height: 250px; /* Minimalna wysokość, żeby kafle były równe */
+        justify-content: center; /* Wyśrodkowanie treści w pionie */
+    }
+    .blog-card:hover { transform: translateY(-8px); border-color: #00f0ff; background: rgba(11, 30, 51, 0.9); }
+    
+    .card-content { padding: 40px 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    .card-meta { font-family: 'Chakra Petch', monospace; font-size: 0.75rem; color: #00f0ff; margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase; }
+    .card-title { font-size: 1.6rem; margin: 0 0 20px 0; font-weight: 600; line-height: 1.2; color: white; }
+    .card-excerpt { font-size: 1rem; color: #bbb; line-height: 1.6; margin-bottom: 30px; }
+    
+    .read-more { 
+        font-size: 0.85rem; font-weight: 600; color: #00f0ff; text-transform: uppercase; letter-spacing: 1px; 
+        display: inline-block; margin-top: auto;
+    }
+
+    /* STOPKA */
+    footer { display: flex; flex-direction: column; width: 100%; background: rgba(11, 30, 51, 0.95); border-top: 1px solid rgba(255,255,255,0.1); padding: 30px 0 10px 0; }
+    .footer-columns { display: flex; justify-content: space-between; align-items: center; padding: 0 50px; margin-bottom: 20px; }
+    .data-block { font-size: 0.9rem; color: #ccc; line-height: 1.6; font-family: 'Chakra Petch', sans-serif; }
+    .mono { font-family: 'Chakra Petch', monospace; color: white; }
+    .accent-color { color: #ffffff; }
+    .court-tiny { font-size: 0.7rem; color: #666; text-align: right; max-width: 250px; }
+    .footer-rodo { text-align: center; font-size: 0.65rem; color: #444; font-family: monospace; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); }
+
+    @media (max-width: 768px) {
+        header { padding: 20px; flex-direction: column; gap: 20px; }
+        .section-title { font-size: 2.5rem; }
+        .blog-grid { grid-template-columns: 1fr; }
+        .footer-columns { flex-direction: column; text-align: center; gap: 20px; }
+    }
+</style>

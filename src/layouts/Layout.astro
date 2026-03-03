@@ -1,0 +1,77 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://epro.net.pl');
+---
+
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+        <link rel="stylesheet" href="/fonts/fonts.css" />
+	</head>
+	<body>
+        <div class="bg-photo"></div>
+        
+        <div class="bg-overlay"></div>
+		
+        <div class="content-wrapper">
+            <slot />
+        </div>
+	</body>
+</html>
+
+<style is:global>
+    /* RESET */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Rajdhani', sans-serif;
+        color: white;
+        background-color: #0b1e33; /* Kolor awaryjny */
+        overflow-x: hidden;
+    }
+
+    /* 1. ZDJĘCIE W TLE - Musi być widoczne */
+    .bg-photo {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        /* URL z Twojego pierwszego kodu */
+        background-image: url('/img/bg-building.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0; /* Najniższa warstwa */
+    }
+
+    /* 2. KOLOROWY FILTR - Granatowy, ale półprzezroczysty */
+    .bg-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(11, 30, 51, 0.65); /* 65% krycia kolorem granatowym - WIEŻOWCE BĘDĄ PRZEŚWITYWAĆ */
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* 3. TREŚĆ - Musi być na samym wierzchu */
+    .content-wrapper {
+        position: relative;
+        z-index: 2; /* Wyżej niż tło */
+        height: 100%;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    * { box-sizing: border-box; }
+</style>

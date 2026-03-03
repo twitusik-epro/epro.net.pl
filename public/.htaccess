@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Trailing slash – dodaj slash do URL bez rozszerzenia (np. /blog/projektowanie-3d-bim -> .../blog/projektowanie-3d-bim/)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]+$
+RewriteRule ^ https://epro.net.pl%{REQUEST_URI}/ [R=301,L]
+
+# Wymuszenie HTTPS + non-www (jezeli HTTP lub www -> przekieruj na https://epro.net.pl)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.epro\.net\.pl [NC]
+RewriteRule ^ https://epro.net.pl%{REQUEST_URI} [R=301,L]

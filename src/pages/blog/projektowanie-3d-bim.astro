@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Projektowanie 3D w BIM | ePro Blog" description="Czym jest BIM i modelowanie 3D w Revit? Poznaj korzyści dla inwestora: detekcja kolizji, koordynacja branżowa i precyzja instalacji elektrycznych.">
+    <div class="article-wrapper">
+        <header>
+            <div class="logo">ePro Tomasz Witusik sp. k.</div>
+            <a href="/blog" class="back-link">← Powrót do Bazy Wiedzy</a>
+        </header>
+
+        <article class="article-container">
+            <h1>Projektowanie 3D w BIM - o co w tym chodzi?</h1>
+            <div class="meta">Kategoria: Technologia | Czas czytania: 3 min</div>
+
+            <p>Przez dziesięciolecia standardem w projektowaniu instalacji elektrycznych były płaskie rysunki CAD (Computer Aided Design). Choć zrewolucjonizowały one deskę kreślarską, to wciąż były tylko cyfrowym odpowiednikiem kartki papieru. Dziś wkraczamy w nową erę – erę <strong>BIM (Building Information Modeling)</strong>.</p>
+
+            <h2>Więcej niż model 3D</h2>
+            <p>Wiele osób mylnie utożsamia BIM jedynie z ładną wizualizacją budynku w trójwymiarze. Owszem, modelowanie 3D jest fundamentem, ale kluczowa litera w tym skrócie to <strong>"I" – Information</strong>.</p>
+            <p>W ePro, korzystając z oprogramowania takiego jak Revit, nie rysujemy "linii", które symbolizują kable. Tworzymy cyfrowe obiekty, które posiadają konkretne parametry fizyczne, elektryczne i kosztorysowe. Koryto kablowe w naszym projekcie to nie tylko dwa równoległe kreski – to obiekt o konkretnym producencie, materiale, wadze i pojemności.</p>
+
+            <h2>Dlaczego to jest ważne dla Inwestora?</h2>
+            <p>Przejście na modelowanie BIM to nie tylko ułatwienie dla projektanta, ale realne zyski dla inwestora. Oto kluczowe korzyści:</p>
+
+            <ul>
+                <li><strong>Detekcja kolizji (Clash Detection):</strong> Największa zmora budów to moment, gdy instalator wchodzi na drabinę i widzi, że jego trasa kablowa koliduje z kanałem wentylacyjnym. W BIM widzimy to na etapie komputera, a nie betonu. Oszczędza to ogromne koszty przeróbek.</li>
+                <li><strong>Łatwiejsza koordynacja:</strong> Architekci, konstruktorzy i instalatorzy pracują na jednym, spójnym modelu cyfrowym.</li>
+            </ul>
+
+            <div class="highlight-box">
+                "BIM to budowanie obiektu dwa razy. Najpierw wirtualnie, w komputerze, gdzie błędy nic nie kosztują, a dopiero potem w rzeczywistości."
+            </div>
+
+            <h2>Revit w praktyce ePro</h2>
+            <p>W naszej firmie wykorzystujemy modelowanie BIM dla opraw oświetleniowych wewnętrznych i lamp zewnętrznych, gniazd, łączników, tras kablowych, widoku rozdzielnic i instalacji odgromowej. Dzięki temu, że widzimy budynek przestrzennie, jesteśmy w stanie zaproponować rozwiązania, które są nie tylko bezpieczne, ale też estetyczne i ekonomiczne w montażu.</p>
+
+            <h2>Modelowanie 3D BIM na zlecenie</h2>
+            <p>Wspieramy również inne biura projektowe i inżynierów. Jeśli nie posiadasz oprogramowania Revit, a Twoje aktualne zlecenie od Inwestora wymaga wykonania projektu w standardzie <strong>BIM 3D</strong> – możesz zlecić nam tę usługę.</p>
+            <p>My wykonamy całą pracę związaną z modelowaniem przestrzennym instalacji. Następnie przekażemy Ci gotowe pliki 3D oraz podkłady profesjonalnie wyeksportowane do formatu <strong>2D CAD (DWG)</strong>. Dzięki temu Ty zajmiesz się dokończeniem kompletnego projektu elektrycznego w swoim znanym środowisku, spełniając jednocześnie wysokie wymagania kontraktowe.</p>
+
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .article-wrapper { min-height: 100vh; overflow-y: auto; position: relative; z-index: 10; }
+    
+    header {
+        padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;
+        background: rgba(11, 30, 51, 0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100;
+    }
+    .logo { font-size: 1.1rem; font-weight: 700; color: white; }
+    .back-link { color: #4facfe; font-size: 0.9rem; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    .article-container {
+        max-width: 800px; margin: 60px auto; padding: 40px;
+        background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px);
+        border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    h1 { font-size: 2.5rem; color: #ffffff; margin-bottom: 10px; line-height: 1.2; }
+    .meta { color: #4facfe; margin-bottom: 40px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+    h2 { color: white; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px; border-left: 4px solid #4facfe; padding-left: 15px; }
+    p { margin-bottom: 20px; font-size: 1.1rem; color: #d0d0d0; line-height: 1.6; }
+    ul { margin-bottom: 30px; padding-left: 20px; color: #d0d0d0; }
+    li { margin-bottom: 10px; }
+    strong { color: white; }
+    .highlight-box { background: rgba(79, 172, 254, 0.1); border-left: 4px solid #4facfe; padding: 20px; margin: 30px 0; font-style: italic; color: #e0e0e0; }
+
+    @media (max-width: 768px) {
+        .article-container { margin: 20px; padding: 20px; }
+        h1 { font-size: 2rem; }
+        header { padding: 15px 20px; }
+    }
+</style>

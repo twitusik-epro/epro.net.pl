@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ePro Tomasz Witusik sp. k. | Projektowanie 3D BIM Revit" description="ePro – kompleksowe instalacje elektryczne i projektowanie 3D BIM w Revit. Budownictwo komercyjne, przemysłowe i mieszkaniowe. Działamy od 2006 roku.">
+    
+    <svg class="cables-container" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <path class="cable-path" d="M0,200 C300,200 400,400 600,400 S900,100 1200,100 S1600,300 1920,200" />
+        <path class="cable-path" d="M-100,800 C200,800 500,600 800,600 S1400,900 2000,800" />
+        <path class="cable-path" d="M1500,0 L1500,300 C1500,500 1700,500 1700,800 L1700,1100" style="animation-duration: 10s;"/>
+    </svg>
+
+    <div class="main-container">
+        
+        <header>
+            <div class="logo">
+                <span class="logo-text">ePro Tomasz Witusik sp. k.</span>
+            </div>
+            
+            <a href="/blog" class="tech-btn">
+                <span class="btn-bracket">[</span> Baza Wiedzy & Blog <span class="btn-bracket">]</span>
+            </a>
+            
+            <div class="contact-top">
+                <span class="icon-red">📞</span> 600 100 748
+            </div>
+        </header>
+
+        <section class="center-content">
+            
+            <div class="tech-label">
+                <span class="crosshair">+</span>
+                <span class="text">DZIAŁAMY OD 2006 ROKU</span>
+                <span class="crosshair">+</span>
+            </div>
+            
+            <h1 class="hero-title">ePro</h1>
+            
+            <div class="bim-container">
+                <h2 class="bim-border">
+                    PROJEKTOWANIE 3D <span class="highlight">///</span> BIM REVIT
+                </h2>
+            </div>
+            
+            <div class="description-box">
+                <h3 class="tagline-main">Kompleksowe instalacje elektryczne</h3>
+                <p class="tagline-sub">Budownictwo komercyjne • Przemysłowe • Mieszkaniowe</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <div class="data-block">
+                        NIP: <span class="mono">5130300068</span><br>
+                        KRS: <span class="mono">0001151114</span>
+                    </div>
+                </div>
+
+                <div class="footer-col center-col">
+                    <div class="data-block">
+                        <span class="accent-color">epro@epro.net.pl, www.epro.net.pl</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col right-col">
+                    <div class="court-tiny">
+                        Sąd Rejonowy dla Krakowa Śródmieścia<br>
+                        XII Wydział Gospodarczy KRS
+                    </div>
+                    <div class="court-tiny" style="margin-top: 6px;">
+                        Ta strona nie używa plików cookies<br>
+                        ani nie śledzi użytkowników.
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-rodo">
+                RODO: Administratorem danych jest ePro Tomasz Witusik sp. k.
+            </div>
+        </footer>
+
+    </div>
+</Layout>
+
+<style>
+    /* === STYLE === */
+
+    /* KABLE */
+    .cables-container {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+        z-index: 0; pointer-events: none;
+    }
+    .cable-path {
+        fill: none; stroke: rgba(255, 255, 255, 0.2); stroke-width: 1.5; stroke-dasharray: 1000; stroke-dashoffset: 1000;
+        animation: drawLine 8s ease-in-out infinite alternate;
+    }
+    .cable-path:nth-child(2) {
+        stroke: rgba(0, 240, 255, 0.3); animation-duration: 12s; animation-delay: 1s;
+    }
+    @keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+    /* UKŁAD */
+    .main-container {
+        position: relative; z-index: 10; height: 100vh; display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    /* HEADER */
+    header {
+        padding: 30px 50px; display: flex; justify-content: space-between; align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        background: linear-gradient(to bottom, rgba(11,30,51,0.8), transparent);
+    }
+    .logo-text { font-weight: 700; color: white; font-size: 1.3rem; letter-spacing: 1px; text-transform: uppercase; }
+
+    .tech-btn {
+        color: #00f0ff; font-family: 'Chakra Petch', sans-serif; font-weight: 600; 
+        text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+        border: 1px solid rgba(0, 240, 255, 0.3); padding: 8px 15px;
+        background: rgba(0, 240, 255, 0.05);
+    }
+    .tech-btn:hover { background: rgba(0, 240, 255, 0.15); border: 1px solid #00f0ff; box-shadow: 0 0 15px rgba(0,240,255,0.3); }
+    .btn-bracket { color: white; }
+
+    .contact-top { font-family: 'Chakra Petch', monospace; color: white; font-size: 1.1rem; }
+    .icon-red { color: #ff3333; margin-right: 8px; font-size: 1.2rem; }
+
+    /* ŚRODEK */
+    .center-content { text-align: center; display: flex; flex-direction: column; align-items: center; margin-top: -40px; }
+
+    .tech-label { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; color: #00f0ff; font-family: 'Chakra Petch', monospace; font-size: 0.8rem; letter-spacing: 3px; opacity: 0.8; }
+    
+    .hero-title {
+        font-size: 9rem; margin: -20px 0; font-weight: 700; color: white;
+        letter-spacing: -2px; line-height: 1;
+        text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .bim-container { margin: 10px 0 40px 0; }
+    
+    /* STYL DLA H2 (RAMKA) */
+    .bim-border {
+        margin: 0; /* Reset marginesu dla H2 */
+        border: 1px solid #00f0ff; padding: 10px 30px;
+        font-size: 1.5rem; font-weight: 600; color: white; letter-spacing: 4px;
+        background: rgba(11, 30, 51, 0.6);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+        position: relative;
+    }
+    .bim-border::before, .bim-border::after {
+        content: ''; position: absolute; width: 4px; height: 4px; background: #00f0ff;
+    }
+    .bim-border::before { top: -2px; left: -2px; }
+    .bim-border::after { bottom: -2px; right: -2px; }
+    .highlight { color: #00f0ff; }
+
+    .description-box { color: #ccc; font-family: 'Chakra Petch', sans-serif; }
+    
+    /* STYL DLA H3 (HASŁO) */
+    .tagline-main { 
+        font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; 
+        font-weight: 400; /* H3 domyślnie jest gruby, tutaj ma być normalny */
+    }
+    
+    .tagline-sub { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #8899a6; margin: 0; }
+
+    /* STOPKA */
+    footer {
+        display: flex; flex-direction: column;
+        width: 100%;
+        background: rgba(11, 30, 51, 0.95);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px; 
+        padding-bottom: 5px;
+    }
+
+    .footer-columns {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 0 50px;
+        margin-bottom: 15px;
+    }
+
+    .data-block { font-size: 0.9rem; color: #ccc; line-height: 1.6; font-family: 'Chakra Petch', sans-serif; }
+    .accent-color { color: #ffffff; }
+    .mono { font-family: 'Chakra Petch', monospace; color: white; }
+    .court-tiny { font-size: 0.7rem; color: #8899a6; text-align: right; max-width: 250px; }
+
+    .footer-rodo {
+        text-align: center; font-size: 0.65rem; color: #555; font-family: monospace;
+        padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* RWD */
+    @media (max-width: 1024px) { .hero-title { font-size: 7rem; } }
+    @media (max-width: 768px) {
+        header { flex-direction: column; gap: 20px; }
+        .hero-title { font-size: 5rem; }
+        .bim-border { font-size: 1rem; letter-spacing: 2px; }
+        .footer-columns { flex-direction: column; text-align: center; gap: 15px; }
+        .court-tiny { text-align: center; }
+        .main-container { height: auto; min-height: 100vh; overflow-y: auto; }
+    }
+</style>
