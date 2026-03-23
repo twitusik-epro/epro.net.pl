@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <circle cx="50" cy="50" r="47" fill="white" stroke="#0b1e33" stroke-width="2"/>
-  <text x="50" y="50" font-family="sans-serif" font-weight="700" font-size="28"
-        text-anchor="middle" dominant-baseline="central" fill="#0b1e33">ePro</text>
+  <text x="50" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="30"
+        text-anchor="middle" dy="0.35em" fill="#0b1e33">ePro</text>
 </svg>
